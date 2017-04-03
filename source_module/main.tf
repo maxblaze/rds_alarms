@@ -9,7 +9,7 @@ resource "aws_cloudwatch_metric_alarm" "alarm_rds_CPU" {
   threshold = "80.0"
   unit = "Percent"
   alarm_description = ""
-  alarm_actions = ["arn:aws:sns:us-east-1:615329498766:ct-users-anu"]
+  alarm_actions = "${var.alarm_actions}"
   dimensions {
       DBInstanceIdentifier = "${var.name}"
   }
@@ -25,7 +25,7 @@ resource "aws_cloudwatch_metric_alarm" "alarm_rds_StorageSpace" {
   statistic = "${var.statistic}"
   threshold = "10000000000.0"
   alarm_description = ""
-  alarm_actions = ["arn:aws:sns:us-east-1:615329498766:ct-users-anu"]
+  alarm_actions = "${var.alarm_actions}"
   dimensions {
       DBInstanceIdentifier = "${var.name}"
   }
@@ -41,7 +41,7 @@ resource "aws_cloudwatch_metric_alarm" "alarm_rds_FreeableMemory" {
   statistic = "${var.statistic}"
   threshold = "5000000.0"
   alarm_description = ""
-  alarm_actions = ["arn:aws:sns:us-east-1:615329498766:ct-users-anu"]
+  alarm_actions = "${var.alarm_actions}"
   dimensions {
       DBInstanceIdentifier = "${var.name}"
   }
@@ -57,7 +57,7 @@ resource "aws_cloudwatch_metric_alarm" "alarm_rds_DatabaseConnections" {
   statistic = "${var.statistic}"
   threshold = "1600.0"
   alarm_description = ""
-  alarm_actions = ["arn:aws:sns:us-east-1:615329498766:ct-users-anu"]
+  alarm_actions = "${var.alarm_actions}"
   dimensions {
       DBInstanceIdentifier = "${var.name}"
   }
@@ -73,7 +73,7 @@ resource "aws_cloudwatch_metric_alarm" "alarm_rds_ReadThrottleEvents" {
   statistic = "${var.statistic}"
   threshold = "20.0"
   alarm_description = ""
-  alarm_actions = ["arn:aws:sns:us-east-1:615329498766:ct-users-anu"]
+  alarm_actions = "${var.alarm_actions}"
   dimensions {
       DBInstanceIdentifier = "${var.name}"
   }
@@ -89,7 +89,7 @@ resource "aws_cloudwatch_metric_alarm" "alarm_rds_WriteThrottleEvents" {
   statistic = "${var.statistic}"
   threshold = "20.0"
   alarm_description = ""
-  alarm_actions = ["arn:aws:sns:us-east-1:615329498766:ct-users-anu"]
+  alarm_actions = "${var.alarm_actions}"
   dimensions {
       DBInstanceIdentifier = "${var.name}"
   }
@@ -105,7 +105,7 @@ resource "aws_cloudwatch_metric_alarm" "alarm_rds_WriteIOPS" {
   statistic = "${var.statistic}"
   threshold = "800.0"
   alarm_description = ""
-  alarm_actions = ["arn:aws:sns:us-east-1:615329498766:ct-users-anu"]
+  alarm_actions = "${var.alarm_actions}"
   dimensions {
       DBInstanceIdentifier = "${var.name}"
   }
@@ -121,7 +121,7 @@ resource "aws_cloudwatch_metric_alarm" "alarm_rds_ReadIOPS" {
   statistic = "${var.statistic}"
   threshold = "200.0"
   alarm_description = ""
-  alarm_actions = ["arn:aws:sns:us-east-1:615329498766:ct-users-anu"]
+  alarm_actions = "${var.alarm_actions}"
   dimensions {
       DBInstanceIdentifier = "${var.name}"
   }

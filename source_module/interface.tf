@@ -39,7 +39,5 @@ variable "alarm_description" {
 }
 
 variable "alarm_actions" {
-  type = "list"
-  default = [""]
+  default = ["arn:aws:sns:us-east-1:615329498766:ct-users-anu"]
 }
-
